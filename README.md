@@ -3,7 +3,7 @@ Why I’m Building Tools for War Crime Investigation:
 Thousands of videos and photos are uploaded to Telegram and Twitter every day from conflict zones. The problem isn't finding evidence; it's proving that what we’re looking at is real. As an engineering student, I realized that my most valuable contribution isn't just passion but building the technical "filters" that help investigators find the truth in a sea of data.
 That's the reason I made this passion project "Digital Evidence Triage Tool"
 
-1.Touching files for the first time is complicated 
+1. Touching files for the first time is complicated 
 
 In forensics, the most dangerous moment for a piece of evidence is the first time you touch it. If an investigator opens a file and accidentally saves a change, the metadata changes, and a defense lawyer could get that evidence thrown out of court. I tackled this by building a hashing system right into the start of my script. Before my code even looks at what’s in the file, it generates a SHA-256 hash. It’s like a digital fingerprint. If even one pixel is changed later on, that fingerprint breaks. I made sure the script reads the file in "chunks" (small 4KB blocks) so it doesn't crash a normal laptop when processing hours of heavy footage.
 
